@@ -1,0 +1,4 @@
+* Purpose
+  BDD is powerful.
+  So is Property Based Testing.
+  Let's put them together.
