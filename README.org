@@ -2,5 +2,136 @@
   BDD is powerful.
   So is Property Based Testing.
   Let's put them together.
+* Usage
+  #+begin_src shell :shebang #!/bin/bash -i :results output
+cd ~/property_based_testing_BDD
+source env/bin/activate
+behave --no-capture
+  #+end_src
+
+  #+RESULTS:
+  #+begin_example
+  Feature: Multiply integers # features/property_based_testing.feature:1
+
+    Scenario: Multiply integers with zero  # features/property_based_testing.feature:3
+      Given I have any integer             # features/steps/multiply.py:6
+      When we multiply it by zero          # features/steps/multiply.py:10
+      Then we should get a zero            # features/steps/multiply.py:14
+  Multiplying 0 with zero
+  Multiplying 0 with zero
+  Multiplying 0 with zero
+  Multiplying 7 with zero
+  Multiplying 0 with zero
+  Multiplying -5983 with zero
+  Multiplying 0 with zero
+  Multiplying -2009732042 with zero
+  Multiplying 0 with zero
+  Multiplying -18427 with zero
+  Multiplying 0 with zero
+  Multiplying -6240 with zero
+  Multiplying 24 with zero
+  Multiplying -60 with zero
+  Multiplying -1112268405 with zero
+  Multiplying 0 with zero
+  Multiplying -14848311 with zero
+  Multiplying -9212 with zero
+  Multiplying -35 with zero
+  Multiplying -46 with zero
+  Multiplying -782120299 with zero
+  Multiplying -124 with zero
+  Multiplying 31931 with zero
+  Multiplying -124 with zero
+  Multiplying -3725 with zero
+  Multiplying -14 with zero
+  Multiplying -18841 with zero
+  Multiplying -18841 with zero
+  Multiplying 1099330220 with zero
+  Multiplying 1099330220 with zero
+  Multiplying -88 with zero
+  Multiplying 1487384996 with zero
+  Multiplying 57 with zero
+  Multiplying -962369975 with zero
+  Multiplying 89 with zero
+  Multiplying 1494025681 with zero
+  Multiplying -15396 with zero
+  Multiplying -15396 with zero
+  Multiplying -27983 with zero
+  Multiplying -27983 with zero
+  Multiplying -342 with zero
+  Multiplying -342 with zero
+  Multiplying -12488 with zero
+  Multiplying -48 with zero
+  Multiplying 36 with zero
+  Multiplying 604766394 with zero
+  Multiplying 3971 with zero
+  Multiplying -15 with zero
+  Multiplying -97 with zero
+  Multiplying 1639402408 with zero
+  Multiplying -4260 with zero
+  Multiplying -16 with zero
+  Multiplying -7462822841175873545 with zero
+  Multiplying 26513 with zero
+  Multiplying -11391 with zero
+  Multiplying -11391 with zero
+  Multiplying -7462 with zero
+  Multiplying 29 with zero
+  Multiplying 31 with zero
+  Multiplying 31 with zero
+  Multiplying -8990 with zero
+  Multiplying -8990 with zero
+  Multiplying -8990 with zero
+  Multiplying 69 with zero
+  Multiplying 69 with zero
+  Multiplying 82 with zero
+  Multiplying -1377471499 with zero
+  Multiplying -23605 with zero
+  Multiplying -23605 with zero
+  Multiplying -9831 with zero
+  Multiplying -9831 with zero
+  Multiplying -9125 with zero
+  Multiplying 6889166546629628756 with zero
+  Multiplying -95 with zero
+  Multiplying -95 with zero
+  Multiplying -26128 with zero
+  Multiplying -26128 with zero
+  Multiplying -8924 with zero
+  Multiplying -8924 with zero
+  Multiplying -1583 with zero
+  Multiplying 6 with zero
+  Multiplying -753828586 with zero
+  Multiplying -753828586 with zero
+  Multiplying 14047 with zero
+  Multiplying 3682149224321359117 with zero
+  Multiplying 67923664382264253679073091404161157746 with zero
+  Multiplying -13081 with zero
+  Multiplying -739103269 with zero
+  Multiplying -739103269 with zero
+  Multiplying -109 with zero
+  Multiplying 1842269784 with zero
+  Multiplying -8850 with zero
+  Multiplying -34 with zero
+  Multiplying 14128 with zero
+  Multiplying 14128 with zero
+  Multiplying -93 with zero
+  Multiplying -93 with zero
+  Multiplying 3 with zero
+  Multiplying 51172085 with zero
+  Multiplying -4109 with zero
+
+  1 feature passed, 0 failed, 0 skipped
+  1 scenario passed, 0 failed, 0 skipped
+  3 steps passed, 0 failed, 0 skipped, 0 undefined
+  Took 0m0.080s
+  #+end_example
+
+* Installation
+  #+begin_src shell :shebang #!/bin/bash -i :results output
+cd ~/property_based_testing_BDD
+python3 -m venv env
+source env/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+  #+end_src
+
 * TODO_NEXT Store integers in context, somehow
   - State "TODO_NEXT"  from              [2020-06-15 Mon 13:35]
